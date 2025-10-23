@@ -1,0 +1,41 @@
+.header-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  background: var(--bs-card-bg) !important;
+}
+
+.search-form {
+  max-width: 500px;
+  flex: 1;
+  
+  .input-group-text {
+    color: var(--bs-secondary);
+  }
+  
+  .form-control {
+    background: transparent;
+    border-color: var(--bs-border-color);
+    
+    &:focus {
+      background: transparent;
+      border-color: var(--bs-primary);
+      box-shadow: none;
+    }
+  }
+}
+
+.btn.rounded-circle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: var(--bs-border-color);
+  
+  &:hover {
+    border-color: var(--bs-primary);
+    color: var(--bs-primary);
+  }
+}

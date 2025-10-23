@@ -1,0 +1,112 @@
+.enhanced-home-page {
+  .hero-section {
+    background: linear-gradient(135deg, rgba(13, 110, 253, 0.1) 0%, rgba(111, 66, 193, 0.05) 100%);
+    
+    .display-4 {
+      background: linear-gradient(135deg, var(--bs-primary) 0%, rgba(111, 66, 193, 0.8) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .quick-action-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 12px;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      
+      .arrow-icon {
+        transform: translate(4px, -4px);
+      }
+    }
+    
+    .icon-wrapper {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      flex-shrink: 0;
+    }
+    
+    .arrow-icon {
+      transition: transform 0.3s ease;
+      color: var(--bs-secondary);
+    }
+  }
+
+  .feature-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(var(--bs-primary-rgb), 0.1);
+      color: var(--bs-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        
+        .bullet {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--bs-primary);
+          margin-right: 0.75rem;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+
+  .stat-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+[data-bs-theme="dark"] {
+  .enhanced-home-page {
+    .hero-section {
+      background: linear-gradient(135deg, rgba(13, 110, 253, 0.15) 0%, rgba(111, 66, 193, 0.1) 100%);
+    }
+    
+    .quick-action-card,
+    .feature-card {
+      background: #1a1a1a;
+      border-color: #2a2a2a;
+      
+      &:hover {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
